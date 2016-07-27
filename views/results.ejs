@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<h1>Search Result</h1>
+
+<div class="container">
+	<% movies["Search"].forEach(function(movie){ %>
+		<div class="display-result">
+			<h2><%= movie["Title"] %> (<%= movie["Year"] %>)</h2>
+			<img src="<%= movie["Poster"] %>">
+		</div>
+	<% }) %>
+</div>
+
+<a href="/"><button>Back</button></a>
+<% include partials/footer %>
